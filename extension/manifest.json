@@ -2,7 +2,7 @@
 	"name": "VeniVidiWiki",
 	"short_name": "vvw",
 	"description" : "I came, I saw, I knew. It redirects wikipedia request to wiki-zero. It also lets the in-page links on Wiki Zero pages work.",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "manifest_version": 2,
 	"background": {
 		"scripts": ["background.js"]
