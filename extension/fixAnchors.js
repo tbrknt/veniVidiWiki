@@ -36,6 +36,19 @@
 		}
 	}
 
+	// fixes backlinks of references
+	var backlinkElems = document.getElementsByClassName("mw-cite-backlink");
+	for(var i=0; i<backlinkElems.length; i++){
+		var backlinkAElems = backlinkElems[i].getElementsByTagName('a');
+		for(var j=0; j<backlinkAElems.length; j++){
+			var href = backlinkAElems[j].href;
+			var hashedURL = href.split('?')[1].split('=')[1];
+			var decodedURL = decode_base64url(hashedURL);
+			var decodedAnchor = decodedURL.split('#')[1];
+			backlinkAElems[j].href='#'+decodedAnchor;
+		}
+	}
+
     // Expose to global
 	// window['variableName'] = variableName;
 })();
