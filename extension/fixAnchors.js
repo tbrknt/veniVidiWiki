@@ -24,17 +24,18 @@
 	}
 
 	// fixes reference anchors
-	var supElems = document.getElementsByTagName("sup");
-	for(var i=0; i<supElems.length; i++){
-		var supAElems = supElems[i].getElementsByTagName('a');
-		for(var j=0; j<supAElems.length; j++){
-			var href = supAElems[j].href;
+	var refElems = document.getElementsByClassName("reference");
+	for(var i=0; i<refElems.length; i++){
+		var refAElems = refElems[i].getElementsByTagName('a');
+		for(var j=0; j<refAElems.length; j++){
+			var href = refAElems[j].href;
 			var hashedURL = href.split('?')[1].split('=')[1];
 			var decodedURL = decode_base64url(hashedURL);
 			var decodedAnchor = decodedURL.split('#')[1];
-			supAElems[j].href='#'+decodedAnchor;
+			refAElems[j].href='#'+decodedAnchor;
 		}
 	}
+
     // Expose to global
 	// window['variableName'] = variableName;
 })();
