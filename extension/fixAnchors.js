@@ -10,6 +10,7 @@
 		return decode_URI(atob(s));
 	}
 
+	// fixes table of content (toc) anchors
 	var tocElem = document.getElementById("toc");
 	if(tocElem !== null){
 		var aElems = tocElem.getElementsByTagName('a');
@@ -20,7 +21,9 @@
 			var decodedAnchor = decodedURL.split('#')[1];
 			aElems[i].href='#'+decodedAnchor;
 		}
-	}	
+	}
+
+	// fixes reference anchors
 	var supElems = document.getElementsByTagName("sup");
 	for(var i=0; i<supElems.length; i++){
 		var supAElems = supElems[i].getElementsByTagName('a');
