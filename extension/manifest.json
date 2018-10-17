@@ -9,7 +9,7 @@
 	},
 	"content_scripts": [
 		{
-		  "matches": ["*://*.wiki-zero.net/*", "*://*.wikizero.net/*", "*://*.wiki-zero.co/*", "*://*.wikizero.co/*", "*://*.wiki-zero.com/*",  "*://*.wikizero.pro/*"],
+		  "matches": ["*://*.wiki-zero.net/*", "*://*.wikizero.net/*", "*://*.wiki-zero.co/*", "*://*.wikizero.co/*", "*://*.wiki-zero.com/*",  "*://*.wikizero.pro/*", "*://*.wikizeroo.com/*"],
 		  "js": ["fixAnchors.js"],
 		  "run_at": "document_end"
 		}				
